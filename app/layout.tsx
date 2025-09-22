@@ -25,9 +25,26 @@ const neuropol = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "VECTTOR - Soluciones de Iluminación Profesional",
+  description:
+    "Interfaces de iluminación con protocolos DMX y SPI. Soluciones profesionales para iluminación arquitectónica, comercial e industrial.",
+  keywords: "iluminación, DMX, SPI, LED, controladores, interfaces, lighting, México",
+  authors: [{ name: "VECTTOR" }],
+  creator: "VECTTOR",
+  publisher: "VECTTOR",
+  robots: "index, follow",
+  openGraph: {
+    title: "VECTTOR - Soluciones de Iluminación Profesional",
+    description: "Interfaces de iluminación con protocolos DMX y SPI",
+    type: "website",
+    locale: "es_MX",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VECTTOR - Soluciones de Iluminación Profesional",
+    description: "Interfaces de iluminación con protocolos DMX y SPI",
+  },
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -36,8 +53,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${neuropol.variable}`}>
+    <html lang="es">
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${neuropol.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

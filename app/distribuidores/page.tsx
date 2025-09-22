@@ -4,6 +4,14 @@ import { MapPin, Phone, Mail, Globe, Star } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Distribuidores - VECTTOR | Red Nacional de Socios",
+  description:
+    "Encuentra distribuidores autorizados VECTTOR en toda la República Mexicana. Soporte técnico especializado y productos de iluminación profesional.",
+  keywords: "distribuidores, VECTTOR, México, iluminación, DMX, SPI, socios comerciales",
+}
 
 const distribuidores = [
   {
@@ -142,15 +150,15 @@ const distribuidores = [
 
 export default function DistribuidoresPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Header />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-foreground mb-4">
             Red de Distribuidores <span className="text-primary font-neuropol">VECTTOR</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Encuentra el distribuidor autorizado más cercano a tu ubicación. Nuestros socios comerciales están
             capacitados para brindarte el mejor servicio y soporte técnico especializado.
           </p>
@@ -158,16 +166,19 @@ export default function DistribuidoresPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {distribuidores.map((distribuidor, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+            <Card
+              key={index}
+              className="hover:shadow-xl hover:scale-105 transition-all duration-300 bg-card border-2 border-border hover:border-primary/50 backdrop-blur-sm"
+            >
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-lg font-semibold text-gray-900">{distribuidor.name}</CardTitle>
+                  <CardTitle className="text-lg font-semibold text-card-foreground">{distribuidor.name}</CardTitle>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    <span className="text-sm font-medium">{distribuidor.rating}</span>
+                    <span className="text-sm font-medium text-card-foreground">{distribuidor.rating}</span>
                   </div>
                 </div>
-                <div className="flex items-center text-gray-600 mb-2">
+                <div className="flex items-center text-muted-foreground mb-2">
                   <MapPin className="h-4 w-4 mr-2" />
                   <span className="text-sm">
                     {distribuidor.city}, {distribuidor.state}
@@ -176,25 +187,36 @@ export default function DistribuidoresPage() {
               </CardHeader>
 
               <CardContent>
-                <p className="text-gray-600 text-sm mb-4">{distribuidor.description}</p>
+                <p className="text-muted-foreground text-sm mb-4">{distribuidor.description}</p>
 
                 <div className="space-y-2 mb-4">
-                  <div className="flex items-center text-sm text-gray-600">
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <Phone className="h-4 w-4 mr-2" />
-                    {distribuidor.phone}
+                    <a href={`tel:${distribuidor.phone}`} className="hover:text-primary transition-colors">
+                      {distribuidor.phone}
+                    </a>
                   </div>
-                  <div className="flex items-center text-sm text-gray-600">
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <Mail className="h-4 w-4 mr-2" />
-                    {distribuidor.email}
+                    <a href={`mailto:${distribuidor.email}`} className="hover:text-primary transition-colors">
+                      {distribuidor.email}
+                    </a>
                   </div>
-                  <div className="flex items-center text-sm text-gray-600">
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <Globe className="h-4 w-4 mr-2" />
-                    {distribuidor.website}
+                    <a
+                      href={`https://${distribuidor.website}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {distribuidor.website}
+                    </a>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-sm font-medium text-gray-700 mb-2">Especialidades:</p>
+                  <p className="text-sm font-medium text-card-foreground mb-2">Especialidades:</p>
                   <div className="flex flex-wrap gap-1">
                     {distribuidor.specialties.map((specialty, idx) => (
                       <Badge key={idx} variant="secondary" className="text-xs">
@@ -213,9 +235,9 @@ export default function DistribuidoresPage() {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="bg-white rounded-lg p-8 shadow-sm border">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">¿Interesado en ser Distribuidor?</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <div className="bg-card rounded-lg p-8 shadow-sm border-2 border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-2xl font-semibold text-card-foreground mb-4">¿Interesado en ser Distribuidor?</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Únete a nuestra red de distribuidores autorizados y accede a productos exclusivos, capacitación técnica
               especializada y soporte comercial completo.
             </p>

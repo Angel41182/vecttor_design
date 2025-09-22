@@ -1,4 +1,6 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -7,9 +9,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">V</span>
-              </div>
+              <Image src="/images/vecttor-logo.png" alt="Vecttor Logo" width={32} height={32} className="h-8 w-8" />
               <span className="text-2xl font-bold text-primary font-neuropol">VECTTOR</span>
               <span className="text-xs text-muted-foreground">®</span>
             </div>
@@ -18,13 +18,31 @@ export function Footer() {
               innovadora para el control de luces por computadora.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="https://facebook.com/vecttor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Síguenos en Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="https://instagram.com/vecttor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Síguenos en Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="https://wa.me/5255123456789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Contáctanos por WhatsApp"
+              >
                 <MessageCircle className="h-5 w-5" />
               </a>
             </div>
@@ -34,22 +52,22 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Productos</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link href="/productos" className="hover:text-primary transition-colors">
                   Controladores DMX
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link href="/productos" className="hover:text-primary transition-colors">
                   Interfaces SPI
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <Link href="/productos" className="hover:text-primary transition-colors">
                   Software Vecttor
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#contacto" className="hover:text-primary transition-colors">
                   Soporte Técnico
                 </a>
               </li>
