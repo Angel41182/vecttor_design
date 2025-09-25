@@ -1,25 +1,22 @@
-# vecttorredesign
+# Vecttor Design – Web Redesign
 
+Este proyecto es una propuesta de rediseño para Vecttor Iluminación, creada por [Angel Munguía](https://github.com/Angel41182) usando la herramienta visual [v0.app](https://v0.app) y desplegada en [Vercel](https://vercel.com).
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/abmunguiam-2686s-projects/v0-vecttorredesign)
+## 🚀 Demo en vivo
+👉 [vecttorredesign.vercel.app](https://vercel.com/abmunguiam-2686s-projects/v0-vecttorredesign)
 
-## Overview
+## 🛠️ Tecnologías utilizadas
+- [v0.app](https://v0.app) para diseño visual y generación de código.
+- [Vercel](https://vercel.com) para despliegue automático.
+- GitHub para control de versiones.
 
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 📦 Estructura del proyecto
+Este repositorio contiene el código generado por v0.app, listo para ser modificado o integrado con frameworks como Next.js o React.
 
-## Deployment
+## ✨ Autor
+**Angel Munguía**  
+Estudiante de Ingeniería en Software | Diseñador y desarrollador freelance  
+[GitHub](https://github.com/Angel41182) | [LinkedIn](#) | [Upwork](#)
 
-Your project is live at:
-
-**[https://vercel.com/abmunguiam-2686s-projects/v0-vecttorredesign](https://vercel.com/abmunguiam-2686s-projects/v0-vecttorredesign)**
-
-## Build your app
-
-Continue building your app 
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 📄 Licencia
+Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y adaptarlo libremente.
