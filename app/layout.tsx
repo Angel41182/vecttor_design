@@ -2,24 +2,14 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import localFont from "next/font/local"
+import { Orbitron } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
-const neuropol = localFont({
-  src: [
-    {
-      path: "./fonts/neuropol.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/neuropol.woff",
-      weight: "400",
-      style: "normal",
-    },
-  ],
+const neuropol = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-neuropol",
   display: "swap",
 })
