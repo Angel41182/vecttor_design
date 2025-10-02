@@ -14,11 +14,6 @@ const nextConfig = {
   },
   // Enable compression
   compress: true,
-  // Enable experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react'],
-  },
   // Headers for better caching
   async headers() {
     return [
@@ -49,6 +44,10 @@ const nextConfig = {
         ],
       },
     ]
+  },
+  // Enable experimental features for better performance
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
 }
 
